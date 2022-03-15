@@ -19,10 +19,16 @@ ul {
     --container-jumbo-bg: lightgrey;
 
     --left-app-content-width: 30%;
-    --header-height: 80px;
+
+    --header-height: 60px;
     --header-bg: rgb(201, 195, 195);
+
     --container-app-width: 1000px;
     --container-app-height: 800px;
+
+    --notification-alert-height: 70px;
+    --search-bar-height: 50px;
+
 
 
 }
@@ -136,7 +142,7 @@ header {
 .notifications-alert {
     align-items: center;
     background-color: aqua;
-    height: 80px;
+    height: var(--notification-alert-height);
 }
 
 
@@ -158,7 +164,7 @@ header {
 
 .search-bar {
     padding: .6rem;
-    height: 50px;
+    height: var(--search-bar-height);
 }
 
 .search-bar-btn {
@@ -173,7 +179,7 @@ header {
 
 .chats-list-container {
     background-color: white;
-    height: 590px;
+    height: calc( var(--container-app-height) - var(--notification-alert-height) - var(--search-bar-height) - var(--header-height));
     overflow-y: scroll;
 }
 
@@ -211,14 +217,14 @@ header {
 }
 
 .active-chat {
-    height: calc(100% - var(--header-height));
+    height: calc(100% - var(--header-height) - var(--header-height));
     background-image: url("../img/mine.jpg");
     filter: brightness(.8);
 }
 
 .container-msgs {
     width: 80%;
-    height: 100%;      /*TODO:*/
+    height: calc(100% - var(--header-height));      /*TODO:*/
     margin: 0 auto;
     padding-top: 4rem;
 }
@@ -241,3 +247,9 @@ header {
     background-color: white;
 
 }
+
+.new-msg-bar {
+    height: var(--header-height);
+    background: rgb(224, 215, 215);
+}
+
