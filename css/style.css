@@ -1,7 +1,13 @@
+/* global */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
 }
 
 
@@ -112,6 +118,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--header-bg);
+    height: 80px;
 }
 
 
@@ -124,6 +131,7 @@
 .notifications-alert {
     align-items: center;
     background-color: aqua;
+    height: 80px;
 }
 
 
@@ -140,4 +148,43 @@
 .fa-bell-slash {
     font-size: 1.5rem;
     color: aqua;
+}
+
+
+.search-bar {
+    padding: .6rem;
+    height: 50px;
+}
+
+.search-bar-btn {
+    width: 15%;
+}
+
+.search-bar-input {
+    width: 85%;
+
+}
+
+
+.chats-list-container {
+    background-color: white;
+    height: 590px;
+    overflow-y: scroll;
+}
+
+.chat {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.chat .user-name {
+    padding-top: .8rem;
+}
+
+.time-last-message-sent {
+    margin-left: 3rem;
+}
+
+.chat:hover {
+    background-color: lightgrey;
 }
