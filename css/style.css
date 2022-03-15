@@ -25,6 +25,9 @@
     display: flex;
 }
 
+.underline {
+    text-decoration: underline;
+}
 
 
 
@@ -94,7 +97,7 @@
 .left-app-content {
     height: 100%;
     width: var(--left-app-content-width);
-    background-color: aqua;
+    background-color: rgb(189, 226, 226);
 }
 
 
@@ -116,3 +119,25 @@
     align-items: center;
 }
 
+
+
+.notifications-alert {
+    align-items: center;
+    background-color: aqua;
+}
+
+
+.notifications-alert-icon {
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    margin: .8rem;
+}
+
+.fa-bell-slash {
+    font-size: 1.5rem;
+    color: aqua;
+}
