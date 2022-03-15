@@ -15,13 +15,13 @@ ul {
 
 :root {
     --colored-header-height: 8rem;
-    --colored-header-bg: lightcyan;
-    --container-jumbo-bg: lightgrey;
+    --colored-header-bg: rgb(0,150,136);
+    --container-jumbo-bg: rgb(215,218,215);
 
     --left-app-content-width: 30%;
 
     --header-height: 60px;
-    --header-bg: rgb(201, 195, 195);
+    --header-bg: rgb(235,235,234);
 
     --container-app-width: 1200px;
     --container-app-height: 800px;
@@ -146,7 +146,7 @@ header {
 
 .notifications-alert {
     align-items: center;
-    background-color: aqua;
+    background-color: rgb(142,218,252);
     height: var(--notification-alert-height);
 }
 
@@ -163,7 +163,7 @@ header {
 
 .fa-bell-slash {
     font-size: 1.5rem;
-    color: aqua;
+    color: rgb(142,218,252);
 }
 
 
@@ -183,7 +183,7 @@ header {
 
 
 .chats-list-container {
-    background-color: white;
+    background-color: rgb(255,254,254);
     height: calc( var(--container-app-height) - var(--notification-alert-height) - var(--search-bar-height) - var(--header-height));
     overflow-y: scroll;
 }
@@ -206,13 +206,18 @@ header {
 }
 
 .chat:hover {
-    background-color: lightgrey;
+    background-color: rgb(232,234,235);
 }
 
 
 
 
 /* right content */
+
+
+.header-right-content {
+    border-right: none;
+}
 
 
 .last-access-info {
@@ -224,7 +229,6 @@ header {
 .active-chat {
     height: calc(100% - var(--header-height) - var(--header-height));
     background-image: url("../img/mine.jpg");
-    filter: brightness(.8);
     overflow-y: scroll;
 }
 
@@ -245,18 +249,18 @@ header {
 }
 
 .msg-received {
-    background-color: lightgreen;
+    background-color: rgb(213,248,187);
     margin-left: 60%;
 }
 
 .msg-sent {
-    background-color: white;
+    background-color: rgb(255,254,254);
 
 }
 
 .new-msg-bar {
     height: var(--header-height);
-    background: rgb(224, 215, 215);
+    background: var(--header-bg);
 }
 
 .write-new-msg-input {
