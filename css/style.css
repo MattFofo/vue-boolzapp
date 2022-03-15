@@ -65,14 +65,14 @@ ul {
 
 
 .header-btns .fa-solid{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding-right: .8rem;
     opacity: .5;
 } 
 
-.new-msg-bar .fa-solid{
-    font-size: 1.2rem;
-    opacity: .8;
+.new-msg-bar .fa-solid, .fa-regular{
+    font-size: 1.4rem;
+    opacity: .7;
 } 
 
 
