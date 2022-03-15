@@ -91,7 +91,7 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1200px;
+    width: 1400px;
     height: 800px;
     background-color: yellowgreen;
 }
@@ -173,6 +173,7 @@ ul {
 }
 
 .chat {
+    position: relative;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
@@ -182,7 +183,10 @@ ul {
 }
 
 .time-last-message-sent {
-    margin-left: 3rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    padding-top: .8rem;
 }
 
 .chat:hover {
