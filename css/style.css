@@ -119,7 +119,7 @@ ul {
 .left-app-content {
     height: 100%;
     width: var(--left-app-content-width);
-    background-color: rgb(189, 226, 226);
+    background-color: var(--header-bg);
 }
 
 
@@ -225,11 +225,12 @@ header {
     height: calc(100% - var(--header-height) - var(--header-height));
     background-image: url("../img/mine.jpg");
     filter: brightness(.8);
+    overflow-y: scroll;
 }
 
 .container-msgs {
     width: 80%;
-    height: calc(100% - var(--header-height));      /*TODO:*/
+    height: 100%; 
     margin: 0 auto;
     padding-top: 4rem;
 }
