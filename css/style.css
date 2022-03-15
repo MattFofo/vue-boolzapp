@@ -23,7 +23,7 @@ ul {
     --header-height: 60px;
     --header-bg: rgb(201, 195, 195);
 
-    --container-app-width: 1000px;
+    --container-app-width: 1200px;
     --container-app-height: 800px;
 
     --notification-alert-height: 70px;
@@ -68,6 +68,11 @@ ul {
     font-size: 1.2rem;
     padding-right: .8rem;
     opacity: .5;
+} 
+
+.new-msg-bar .fa-solid{
+    font-size: 1.2rem;
+    opacity: .8;
 } 
 
 
@@ -149,8 +154,8 @@ header {
 .notifications-alert-icon {
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: white;
     border-radius: 50%;
     margin: .8rem;
@@ -253,3 +258,12 @@ header {
     background: rgb(224, 215, 215);
 }
 
+.write-new-msg-input {
+    width: 80%;
+    padding: .5rem;
+}
+
+.new-msg-bar-btn {
+    width: 10%;
+    text-align: center;
+}
