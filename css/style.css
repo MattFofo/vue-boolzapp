@@ -218,7 +218,26 @@ header {
 
 .container-msgs {
     width: 80%;
-    margin: 0 auto;
     height: 100%;      /*TODO:*/
+    margin: 0 auto;
+    padding-top: 4rem;
 }
 
+.box-msg {
+    width: 200px;
+    height: 40px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: .3rem;
+}
+
+.msg-received {
+    background-color: lightgreen;
+    margin-left: 60%;
+}
+
+.msg-sent {
+    background-color: white;
+
+}
