@@ -50,6 +50,18 @@ ul {
     display: flex;
 }
 
+.relative {
+    position: relative;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
 .underline {
     text-decoration: underline;
 }
@@ -58,6 +70,17 @@ ul {
     align-items: center;
 }
 
+header {
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg);
+    height: var(--header-height);
+    border-right: 1px solid darkgrey;
+}
+
+/* ********************************************************************* */
+
+/* shared classes */
 
 .avatar-img {
     width: 80px;
@@ -84,11 +107,17 @@ ul {
     opacity: .7;
 } 
 
+.fa-solid:hover, .fa-regular:hover {
+    opacity: 1;
+    transform: scale(1.4);
+    cursor: pointer;
+}
 
 
 
-/* ********************************************************************* */
+/* ******************************************************************** */
 
+/* containers e sfondo viewport */
 
 .bg-viewport {
     position: absolute;
@@ -123,8 +152,6 @@ ul {
 }
 
 
-
-
 .container-app {
     z-index: 100;
     width: var(--container-app-width);
@@ -132,9 +159,6 @@ ul {
     height: var(--container-app-height);
 }
 
-
-
-/* *********************************************************************** */
 
 .left-app-content {
     height: 100%;
@@ -149,19 +173,16 @@ ul {
 }
 
 
-header {
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--header-bg);
-    height: var(--header-height);
-    border-right: 1px solid darkgrey;
-}
 
+/* *********************************************************************** */
+
+
+
+/* parte sx app */
 
 .user {
     align-items: center;
 }
-
 
 
 .notifications-alert {
@@ -252,6 +273,9 @@ header {
     flex-direction: column;
 }
 
+
+/* active chat */
+
 .active-chat {
     height: calc(100% - var(--header-height) - var(--header-height));
     background-image: url("../img/mine.jpg");
@@ -268,7 +292,7 @@ header {
 .box-msg {
     position: relative;
     width: 40%;
-    height: 40px;
+    height: 50px;
     padding: .5rem;
     display: flex;
     align-items: center;
@@ -295,6 +319,9 @@ header {
     padding-bottom: .2rem;
     padding-right: .3rem;
 }
+
+
+/* footer */
 
 .new-msg-bar {
     height: var(--header-height);

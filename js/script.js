@@ -3,6 +3,7 @@ const app = new Vue({
     el: '#root',
     data: {
         indexActiveChat: 0,
+        msgBarOnFocus: false,
         newMsgSent: 
             {
                 textMsg: '',
@@ -71,7 +72,7 @@ const app = new Vue({
 
             },
             {
-                contactName: 'Sara',
+                contactName: 'Samuele',
                 activeChat: false,
                 avatarImg: 'img/avatar_3.jpg',
                 dateLastAccess: '12:00',
@@ -87,7 +88,127 @@ const app = new Vue({
                         statusMsg: 'received'
                     }
                 ]
-            }
+            },
+            {
+                contactName: 'Michele B.',
+                avatarImg: 'img/avatar_4.jpg',
+                activeChat: true,
+                dateLastAccess: '12:00',
+                chatLog: [
+                    {
+                        textMsg: 'hai portato fuori il cane?',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ricordati i panni!',
+                        date: '15/03/2022 13:20',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ok',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'received'
+                    }
+
+                ],
+            },
+            {
+                contactName: 'Michele C.',
+                avatarImg: 'img/avatar_5.jpg',
+                activeChat: true,
+                dateLastAccess: '12:00',
+                chatLog: [
+                    {
+                        textMsg: 'hai portato fuori il cane?',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ricordati i panni!',
+                        date: '15/03/2022 13:20',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ok',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'received'
+                    }
+
+                ],
+            },
+            {
+                contactName: 'Claudia',
+                avatarImg: 'img/avatar_6.jpg',
+                activeChat: true,
+                dateLastAccess: '12:00',
+                chatLog: [
+                    {
+                        textMsg: 'hai portato fuori il cane?',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ricordati i panni!',
+                        date: '15/03/2022 13:20',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ok',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'received'
+                    }
+
+                ],
+            },
+            {
+                contactName: 'Federico',
+                avatarImg: 'img/avatar_7.jpg',
+                activeChat: true,
+                dateLastAccess: '12:00',
+                chatLog: [
+                    {
+                        textMsg: 'hai portato fuori il cane?',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ricordati i panni!',
+                        date: '15/03/2022 13:20',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ok',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'received'
+                    }
+
+                ],
+            },
+            {
+                contactName: 'Davide',
+                avatarImg: 'img/avatar_8.jpg',
+                activeChat: true,
+                dateLastAccess: '12:00',
+                chatLog: [
+                    {
+                        textMsg: 'hai portato fuori il cane?',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ricordati i panni!',
+                        date: '15/03/2022 13:20',
+                        statusMsg: 'sent'
+                    },
+                    {
+                        textMsg: 'ok',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'received'
+                    }
+
+                ],
+            },
         ]
     },
     methods: {

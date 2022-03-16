@@ -126,10 +126,12 @@
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         
-                        <input @keydown.enter="sendNewMsg" v-model="newMsgSent.textMsg" type="text" name="write-new-msg-input" class="write-new-msg-input" id="write-new-msg-input" placeholder="Scrivi messaggio">
+                        <input @keydown.enter="sendNewMsg" @focus="msgBarOnFocus = true" v-model="newMsgSent.textMsg" type="text" name="write-new-msg-input" class="write-new-msg-input" id="write-new-msg-input" placeholder="Scrivi messaggio">
 
-                        <div class="new-msg-bar-btn send-vocal-msg">
-                            <i class="fa-solid fa-microphone"></i>
+                        <div class="new-msg-bar-btn send-vocal-msg relative">
+                            <!-- TODO: bottone invio compare, ma poi non torna il microfono. Il probema penso che sia che la variabile msgBarOnFocus una volta che si setta true tramita il @focus non torna più false -->
+                            <i class="fa-solid fa-microphone" :class="{'d-none': msgBarOnFocus }"></i>
+                            <i class="fa-regular fa-face-smile prova-btn-invio" :class="msgBarOnFocus ? 'd-block' : 'd-none'"></i>
                         </div>
                     </div>
 
