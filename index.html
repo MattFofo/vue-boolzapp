@@ -67,101 +67,16 @@
                             <ul class="chats-list">
 
                                 <!-- singola chat -->
-                                <li class="chat flex"> 
-                                    <img class="avatar-img" src="img/avatar_1.jpg" alt="">
+                                <li v-for="(contact, index) in contacts" @click="indexActiveChat = index" class="chat flex"> 
+                                    <img class="avatar-img" :src="contact.avatarImg" alt="">
 
                                     <div class="chat-text">
-                                        <div class="contact-name">Michele</div>
-                                        <div class="last-message-sent">Ultimo messaggio inviato</div>
+                                        <div class="contact-name">{{ contact.contactName }}</div>
+                                        <div class="last-message-sent">{{ contact.chatLog[0].textMsg }}</div>
                                     </div>
 
-                                    <div class="time-last-access">12.00</div>
+                                    <div class="time-last-access">{{ contact.dateLastAccess }}</div>
                                 </li>
-
-                                <!-- singola chat -->
-                                <li class="chat flex"> 
-                                    <img class="avatar-img" src="img/avatar_1.jpg" alt="">
-
-                                    <div class="chat-text">
-                                        <div class="contact-name">Michele</div>
-                                        <div class="last-message-sent">Ultimo messaggio inviato</div>
-                                    </div>
-
-                                    <div class="time-last-access">12.00</div>
-                                </li>
-
-                                <!-- singola chat -->
-                                <li class="chat flex"> 
-                                    <img class="avatar-img" src="img/avatar_1.jpg" alt="">
-
-                                    <div class="chat-text">
-                                        <div class="contact-name">Michele</div>
-                                        <div class="last-message-sent">Ultimo messaggio inviato</div>
-                                    </div>
-
-                                    <div class="time-last-access">12.00</div>
-                                </li>
-
-                                <!-- singola chat -->
-                                <li class="chat flex"> 
-                                    <img class="avatar-img" src="img/avatar_1.jpg" alt="">
-
-                                    <div class="chat-text">
-                                        <div class="contact-name">Michele</div>
-                                        <div class="last-message-sent">Ultimo messaggio inviato</div>
-                                    </div>
-
-                                    <div class="time-last-access">12.00</div>
-                                </li>
-
-                                <!-- singola chat -->
-                                <li class="chat flex"> 
-                                    <img class="avatar-img" src="img/avatar_1.jpg" alt="">
-
-                                    <div class="chat-text">
-                                        <div class="contact-name">Michele</div>
-                                        <div class="last-message-sent">Ultimo messaggio inviato</div>
-                                    </div>
-
-                                    <div class="time-last-access">12.00</div>
-                                </li>
-
-                                <!-- singola chat -->
-                                <li class="chat flex"> 
-                                    <img class="avatar-img" src="img/avatar_1.jpg" alt="">
-
-                                    <div class="chat-text">
-                                        <div class="contact-name">Michele</div>
-                                        <div class="last-message-sent">Ultimo messaggio inviato</div>
-                                    </div>
-
-                                    <div class="time-last-access">12.00</div>
-                                </li>
-
-                                <!-- singola chat -->
-                                <li class="chat flex"> 
-                                    <img class="avatar-img" src="img/avatar_1.jpg" alt="">
-
-                                    <div class="chat-text">
-                                        <div class="contact-name">Michele</div>
-                                        <div class="last-message-sent">Ultimo messaggio inviato</div>
-                                    </div>
-
-                                    <div class="time-last-access">12.00</div>
-                                </li>
-
-                                <!-- singola chat -->
-                                <li class="chat flex"> 
-                                    <img class="avatar-img" src="img/avatar_1.jpg" alt="">
-
-                                    <div class="chat-text">
-                                        <div class="contact-name">Michele</div>
-                                        <div class="last-message-sent">Ultimo messaggio inviato</div>
-                                    </div>
-
-                                    <div class="time-last-access">12.00</div>
-                                </li>
-
                                 
                             </ul>
                         </div>
@@ -179,7 +94,7 @@
 
                                 <div class="last-access-info">
                                     <div class="user-name">Michele</div>
-                                    <div class="last-access">Ultimo accesso oggi alle 12:00</div>
+                                    <div class="last-access">Ultimo accesso oggi alle {{  }}</div>
                                 </div>
                             </div>
                         </div>
