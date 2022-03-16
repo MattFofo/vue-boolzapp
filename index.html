@@ -90,11 +90,11 @@
                         <!-- informazioni chat attiva (icone persona e ultimo accesso) -->
                         <div class="user flex">
                             <div class="active-chat-header flex"> 
-                                <img class="avatar-img" src="img/avatar_1.jpg" alt="">
+                                <img class="avatar-img" :src="contacts[indexActiveChat].avatarImg" alt="">
 
                                 <div class="last-access-info">
-                                    <div class="user-name">Michele</div>
-                                    <div class="last-access">Ultimo accesso oggi alle {{  }}</div>
+                                    <div class="user-name">{{ contacts[indexActiveChat].contactName }}</div>
+                                    <div class="last-access">Ultimo accesso oggi alle {{ contacts[indexActiveChat].dateLastAccess }}</div>
                                 </div>
                             </div>
                         </div>
@@ -109,12 +109,12 @@
 
                     <div class="active-chat">
                         <div class="container-msgs">
-                            <div class="box-msg msg-received">
-                                <div class="text-msg">msg di prova</div>
+                            <div v-for="(chat, index) in contacts[indexActiveChat].chatLog" class="box-msg" :class="contacts[indexActiveChat].statusMsg == 'sent' ? 'msg-sent' : 'msg-received'">
+                                <div class="text-msg">prova</div>
                                 <div class="time-msg time-msg-received">15:15</div>
                             </div>
 
-                            <div class="box-msg msg-received">
+                            <!-- <div class="box-msg msg-received">
                                 <div class="text-msg">msg di prova</div>
                                 <div class="time-msg time-msg-received">15:30</div>
                             </div>
@@ -122,7 +122,7 @@
                             <div class="box-msg msg-sent">
                                 <div class="text-msg">msg di prova</div>
                                 <div class="time-msg time-msg-sent">16:30</div> 
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>

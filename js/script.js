@@ -47,6 +47,11 @@ const app = new Vue({
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received'
+                    },
+                    {
+                        textMsg: 'ok',
+                        date: '15/03/2022 13:00',
+                        statusMsg: 'received'
                     }
 
                 ]
@@ -64,18 +69,11 @@ const app = new Vue({
                         statusMsg: 'sent'
                     },
                     {
-                        textMsg: 'ricordati i panni!',
-                        date: '15/03/2022 13:20',
-                        statusMsg: 'sent'
-                    },
-                    {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received'
                     }
-
                 ]
-
             }
         ]
     }
