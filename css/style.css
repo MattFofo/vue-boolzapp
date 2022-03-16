@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+
+body {
+    position: relative;
+}
+
+
 ul {
     list-style: none;
 }
@@ -23,11 +29,13 @@ ul {
     --header-height: 60px;
     --header-bg: rgb(235,235,234);
 
-    --container-app-width: 1200px;
+    --container-app-width: 1400px;
     --container-app-height: 800px;
 
     --notification-alert-height: 70px;
     --search-bar-height: 50px;
+
+    --new-msg-bar-bg: rgb(242,238,235);
 
 
 
@@ -80,8 +88,33 @@ ul {
 
 /* ********************************************************************* */
 
+
+.bg-viewport {
+    position: absolute;
+}
+
+.colored-header {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--colored-header-height);
+    background-color: var(--colored-header-bg);
+}
+
+
+.colored-cover {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--container-jumbo-bg);
+    height: calc(100vh - var(--colored-header-height));
+}
+
+
 .container-jumbo {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100%;
 
@@ -89,26 +122,12 @@ ul {
 }
 
 
-.colored-header {
-    height: var(--colored-header-height);
-    background-color: var(--colored-header-bg);
-    filter: brightness(.8);
-}
-
-
-.colored-cover {
-    background-color: var(--container-jumbo-bg);
-    height: calc(100vh - var(--colored-header-height));
-    filter: brightness(.8);
-}
 
 
 .container-app {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 100;
     width: var(--container-app-width);
+    min-width: 900px;
     height: var(--container-app-height);
 }
 
@@ -240,12 +259,14 @@ header {
 }
 
 .box-msg {
-    width: 200px;
+    position: relative;
+    width: 240px;
     height: 40px;
     padding: .5rem;
     display: flex;
     align-items: center;
     margin-bottom: .3rem;
+    border-radius: 8px;
 }
 
 .msg-received {
@@ -258,14 +279,26 @@ header {
 
 }
 
+.time-msg {
+    font-size: .7rem;
+    color: grey;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: .2rem;
+    padding-right: .3rem;
+}
+
 .new-msg-bar {
     height: var(--header-height);
-    background: var(--header-bg);
+    background: var(--new-msg-bar-bg);
 }
 
 .write-new-msg-input {
     width: 80%;
     padding: .5rem;
+    border: none;
+    border-radius: 4px;
 }
 
 .new-msg-bar-btn {
