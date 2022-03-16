@@ -10,7 +10,7 @@ const app = new Vue({
             },
             newMsgReceived: 
             {
-                textMsg: 'ok',
+                textMsg: 'LOL',
                 date: 'data',
                 statusMsg: 'received'
             },
@@ -98,10 +98,13 @@ const app = new Vue({
                 this.receiveNewMsg();
             }
         },
-        receiveNewMsg() {
+        createMsgReceived() {
             this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgReceived});
 
         },
+        receiveNewMsg() {
+            setTimeout(this.createMsgReceived, 2000)
+        }
         
     }
 })
