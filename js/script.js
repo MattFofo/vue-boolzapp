@@ -1,3 +1,4 @@
+
 const app = new Vue({
     el: '#root',
     data: {
@@ -5,13 +6,13 @@ const app = new Vue({
         newMsgSent: 
             {
                 textMsg: '',
-                date: '',
+                date: luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss'),
                 statusMsg: 'sent'
             },
-            newMsgReceived: 
+        newMsgReceived: 
             {
                 textMsg: 'LOL',
-                date: 'data',
+                date: luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss'),
                 statusMsg: 'received'
             },
         contacts: [
@@ -95,15 +96,20 @@ const app = new Vue({
                 this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgSent});
 
                 this.newMsgSent.textMsg = '';
+                this.newMsgSent.date = this.getDateNow();
                 this.receiveNewMsg();
             }
         },
         createMsgReceived() {
             this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgReceived});
-
+            this.newMsgReceived.date = this.getDateNow();
         },
         receiveNewMsg() {
             setTimeout(this.createMsgReceived, 2000)
+        },
+
+        getDateNow() {
+            return luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss')
         }
         
     }
