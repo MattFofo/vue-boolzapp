@@ -260,7 +260,7 @@ header {
 
 .box-msg {
     position: relative;
-    width: 240px;
+    width: 40%;
     height: 40px;
     padding: .5rem;
     display: flex;
@@ -269,12 +269,12 @@ header {
     border-radius: 8px;
 }
 
-.msg-received {
+.msg-sent {
     background-color: rgb(213,248,187);
     margin-left: 60%;
 }
 
-.msg-sent {
+.msg-received {
     background-color: rgb(255,254,254);
 
 }

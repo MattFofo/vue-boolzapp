@@ -2,6 +2,12 @@ const app = new Vue({
     el: '#root',
     data: {
         indexActiveChat: 0,
+        newMsgSent: 
+            {
+                textMsg: '',
+                date: '',
+                statusMsg: 'sent'
+            },
         contacts: [
             {
                 contactName: 'Michele',
@@ -76,5 +82,14 @@ const app = new Vue({
                 ]
             }
         ]
+    },
+    methods: {
+        sendNewMsg() {
+            if (this.newMsgSent.textMsg != '') {
+                this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgSent});
+
+                this.newMsgSent.textMsg = '';
+            }
+        }
     }
 })

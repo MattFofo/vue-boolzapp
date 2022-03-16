@@ -109,9 +109,9 @@
 
                     <div class="active-chat">
                         <div class="container-msgs">
-                            <div v-for="(chat, index) in contacts[indexActiveChat].chatLog" class="box-msg" :class="contacts[indexActiveChat].statusMsg == 'sent' ? 'msg-sent' : 'msg-received'">
-                                <div class="text-msg">prova</div>
-                                <div class="time-msg time-msg-received">15:15</div>
+                            <div v-for="(chat, index) in contacts[indexActiveChat].chatLog" class="box-msg" :class="chat.statusMsg == 'sent' ? 'msg-sent' : 'msg-received'">
+                                <div class="text-msg">{{ chat.textMsg }}</div>
+                                <div class="time-msg time-msg-received">{{ chat.date }}</div>
                             </div>
 
                             <!-- <div class="box-msg msg-received">
@@ -132,7 +132,7 @@
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         
-                        <input type="text" name="write-new-msg-input" class="write-new-msg-input" id="write-new-msg-input" placeholder="Scrivi messaggio">
+                        <input @keydown.enter="sendNewMsg" v-model="newMsgSent.textMsg" type="text" name="write-new-msg-input" class="write-new-msg-input" id="write-new-msg-input" placeholder="Scrivi messaggio">
 
                         <div class="new-msg-bar-btn send-vocal-msg">
                             <i class="fa-solid fa-microphone"></i>
