@@ -72,7 +72,7 @@
 
                                     <div class="chat-text">
                                         <div class="contact-name">{{ contact.contactName }}</div>
-                                        <div class="last-message-sent">{{ contact.chatLog[0].textMsg }}</div>
+                                        <div class="last-message-sent">{{ contact.chatLog[contact.chatLog.length - 1].textMsg }}</div>
                                     </div>
 
                                     <div class="time-last-access">{{ contact.dateLastAccess }}</div>

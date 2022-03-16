@@ -31,7 +31,7 @@ const app = new Vue({
                         statusMsg: 'received'
                     }
 
-                ]
+                ],
             },
             {
                 contactName: 'Fabio',
