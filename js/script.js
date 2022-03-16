@@ -8,6 +8,12 @@ const app = new Vue({
                 date: '',
                 statusMsg: 'sent'
             },
+            newMsgReceived: 
+            {
+                textMsg: 'ok',
+                date: 'data',
+                statusMsg: 'received'
+            },
         contacts: [
             {
                 contactName: 'Michele',
@@ -89,7 +95,13 @@ const app = new Vue({
                 this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgSent});
 
                 this.newMsgSent.textMsg = '';
+                this.receiveNewMsg();
             }
-        }
+        },
+        receiveNewMsg() {
+            this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgReceived});
+
+        },
+        
     }
 })
