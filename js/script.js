@@ -20,23 +20,26 @@ const app = new Vue({
             {
                 contactName: 'Michele',
                 avatarImg: 'img/avatar_1.jpg',
-                activeChat: true,
+                contactVisible: false,
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
+                        dropdown: false
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
+                        dropdown: false
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
+                        dropdown: false
                     }
 
                 ],
@@ -44,28 +47,28 @@ const app = new Vue({
             {
                 contactName: 'Fabio',
                 avatarImg: 'img/avatar_2.jpg',
-                activeChat: false,
+                contactVisible: false,
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
                         textMsg: 'ciao!',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
                     }
 
                 ]
@@ -73,42 +76,42 @@ const app = new Vue({
             },
             {
                 contactName: 'Samuele',
-                activeChat: false,
+                contactVisible: false,
                 avatarImg: 'img/avatar_3.jpg',
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
                         textMsg: 'ci vediamo domani',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
                     }
                 ]
             },
             {
                 contactName: 'Michele B.',
                 avatarImg: 'img/avatar_4.jpg',
-                activeChat: true,
+                contactVisible: true,
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
                     }
 
                 ],
@@ -116,23 +119,23 @@ const app = new Vue({
             {
                 contactName: 'Michele C.',
                 avatarImg: 'img/avatar_5.jpg',
-                activeChat: true,
+                contactVisible: true,
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
                     }
 
                 ],
@@ -140,23 +143,23 @@ const app = new Vue({
             {
                 contactName: 'Claudia',
                 avatarImg: 'img/avatar_6.jpg',
-                activeChat: true,
+                contactVisible: true,
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
                     }
 
                 ],
@@ -164,23 +167,23 @@ const app = new Vue({
             {
                 contactName: 'Federico',
                 avatarImg: 'img/avatar_7.jpg',
-                activeChat: true,
+                contactVisible: true,
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
                     }
 
                 ],
@@ -188,23 +191,23 @@ const app = new Vue({
             {
                 contactName: 'Davide',
                 avatarImg: 'img/avatar_8.jpg',
-                activeChat: true,
+                contactVisible: true,
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
-                        statusMsg: 'sent'
+                        statusMsg: 'sent',
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
-                        statusMsg: 'received'
+                        statusMsg: 'received',
                     }
 
                 ],
@@ -230,8 +233,11 @@ const app = new Vue({
         },
 
         getDateNow() {
-            return luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss')
-        }
+            return luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss');
+        },
+        msgBarNotOnFocus() {
+            this.msgBarOnFocus = false;
+        },
         
-    }
+    },
 })

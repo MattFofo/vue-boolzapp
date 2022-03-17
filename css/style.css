@@ -298,7 +298,31 @@ header {
     align-items: center;
     margin-bottom: .3rem;
     border-radius: 8px;
+    justify-content: space-between;
 }
+
+/* .box-msg::after {
+    content: "\f104";
+    font: normal normal normal 14px/1 FontAwesome;
+    z-index: 100;
+} */
+
+.btn-dropdown-box-msg {
+    font: normal normal normal 14px/1 FontAwesome;
+    z-index: 100;
+}
+
+
+.dropdown-box-msg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 80px;
+    background-color: white;
+
+}
+
 
 .msg-sent {
     background-color: rgb(213,248,187);
