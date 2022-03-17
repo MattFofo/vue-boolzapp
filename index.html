@@ -62,7 +62,7 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
 
-                            <input @focus="searchingContact" v-model="searchContact" type="text" name="search-bar-input" class="search-bar-input" id="search-bar-input" placeholder="Cerca o inizia una nuova chat">
+                            <input @keyup="searchingContact" v-model="searchContact" type="text" name="search-bar-input" class="search-bar-input" id="search-bar-input" placeholder="Cerca o inizia una nuova chat">
                         </div>
 
                         <div class="chats-list-container">

@@ -4,7 +4,7 @@ const app = new Vue({
     data: {
         indexActiveChat: 0,
         msgBarOnFocus: false,
-        searchContact: [],
+        searchContact: '',
         newMsgSent: 
             {
                 textMsg: '',
@@ -272,12 +272,19 @@ const app = new Vue({
 
         },
         searchingContact() {
-            if (this.searchContact.includes(this.contacts.chatLog.textMsg)) {
-                this.contacts.contactVisible = true;
-                
-            }
+            this.contacts.forEach(contact => { 
+                if (contact.contactName.toLowerCase().includes(this.searchContact.toLowerCase())) {
+                    contact.contactVisible = true;
+                    
+                }else {
+                    contact.contactVisible = false;
+
+                }    
+            });
+
             
         }
         
-    },
+    }
 })
+
