@@ -292,13 +292,16 @@ header {
 .box-msg {
     position: relative;
     width: 40%;
-    height: 50px;
-    padding: .5rem;
+    padding: .7rem;
     display: flex;
     align-items: center;
     margin-bottom: .3rem;
     border-radius: 8px;
     justify-content: space-between;
+}
+
+.prova {
+    flex-wrap: wrap;
 }
 
 /* .box-msg::after {

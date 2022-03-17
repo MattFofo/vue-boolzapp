@@ -114,7 +114,10 @@
                     <div class="active-chat"   @click="msgBarNotOnFocus">
                         <div class="container-msgs">
                             <div v-for="(chat, index) in contacts[indexActiveChat].chatLog" class="box-msg" :class="chat.statusMsg == 'sent' ? 'msg-sent' : 'msg-received'">
-                                <div class="text-msg">{{ chat.textMsg }}</div>
+
+                                <div class="text-msg flex">
+                                    <div class="prova">{{ chat.textMsg }}</div>
+                                </div>
                                 <div class="time-msg time-msg-received">{{ chat.date }}</div>
 
                                 <!-- dropdown buttons -->

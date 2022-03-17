@@ -244,7 +244,7 @@ const app = new Vue({
     },
     methods: {
         sendNewMsg() {
-            if (this.newMsgSent.textMsg != '') {
+            if (this.newMsgSent.textMsg.trim() != '') {
                 this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgSent});
 
                 this.newMsgSent.textMsg = '';
