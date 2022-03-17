@@ -213,19 +213,28 @@ header {
     height: var(--search-bar-height);
 }
 
+.fa-magnifying-glass {
+    opacity: .7;
+}
+
+.fa-magnifying-glass:hover {
+    transform: scale(1);
+}
+
 .search-bar-btn {
     width: 15%;
-    border-top: 1px solid rgb(252, 242, 242);
-    border-left: 1px solid rgb(252, 242, 242);
-    border-bottom: 1px solid rgb(252, 242, 242);
+    border-top: 1px solid var(--new-msg-bar-bg);
+    border-left: 1px solid var(--new-msg-bar-bg);
+    border-bottom: 1px solid var(--new-msg-bar-bg);
     border-right: none;
+    cursor: pointer;
 
 
 }
 
 .search-bar-input {
     width: 85%;
-    border: 1px solid rgb(252, 242, 242);
+    border: 1px solid var(--new-msg-bar-bg);
 }
 
 
@@ -237,8 +246,8 @@ header {
 
 .chat {
     position: relative;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid var(--new-msg-bar-bg);
+    cursor: pointer;
 }
 
 .chat .contact-name {
@@ -292,23 +301,21 @@ header {
 .box-msg {
     position: relative;
     width: 40%;
-    padding: .7rem;
+    padding: .8rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: .3rem;
     border-radius: 8px;
-    justify-content: space-between;
+    word-wrap: break-word;
 }
 
-.prova {
-    flex-wrap: wrap;
+
+.text {
+    max-width: 170px;
 }
 
-/* .box-msg::after {
-    content: "\f104";
-    font: normal normal normal 14px/1 FontAwesome;
-    z-index: 100;
-} */
+
 
 .btn-dropdown-box-msg {
     font: normal normal normal 14px/1 FontAwesome;
@@ -318,13 +325,26 @@ header {
 
 .dropdown-box-msg {
     position: absolute;
-    top: 30px;
-    right: 0;
-    width: 150px;
-    height: 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 130px;
+    height: 60px;
     background-color: white;
     z-index: 50;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px grey;
 
+}
+
+
+.delete-msg {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+}
+
+.dropdown-box-msg:hover {
+    background-color: lightgray;
 }
 
 

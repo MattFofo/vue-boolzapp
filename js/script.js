@@ -50,7 +50,7 @@ const app = new Vue({
             {
                 contactName: 'Fabio',
                 avatarImg: 'img/avatar_2.jpg',
-                contactVisible: false,
+                contactVisible: true,
                 dateLastAccess: '12:00',
                 chatLog: [
                     {
@@ -87,7 +87,7 @@ const app = new Vue({
             },
             {
                 contactName: 'Samuele',
-                contactVisible: false,
+                contactVisible: true,
                 avatarImg: 'img/avatar_3.jpg',
                 dateLastAccess: '12:00',
                 chatLog: [
@@ -246,7 +246,6 @@ const app = new Vue({
         sendNewMsg() {
             if (this.newMsgSent.textMsg.trim() != '') {
                 this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgSent});
-
                 this.newMsgSent.textMsg = '';
                 this.newMsgSent.date = this.getDateNow();
                 this.receiveNewMsg();
@@ -261,10 +260,7 @@ const app = new Vue({
         },
 
         getDateNow() {
-            return luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss');
-        },
-        msgBarNotOnFocus() {
-            this.msgBarOnFocus = false;
+            return luxon.DateTime.now().toFormat('MM/dd/yyyy HH:mm:ss');
         },
         deleteMsg(indexActiveChat, index) {
             this.contacts[indexActiveChat].chatLog.splice([index], 1)
@@ -283,8 +279,7 @@ const app = new Vue({
             });
 
             
-        }
-        
+        },       
     }
 })
 
