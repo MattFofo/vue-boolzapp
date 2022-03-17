@@ -256,14 +256,14 @@ const app = new Vue({
             this.newMsgReceived.date = this.getDateNow();
         },
         receiveNewMsg() {
-            setTimeout(this.createMsgReceived, 2000)
+            setTimeout(this.createMsgReceived, 2000);
         },
 
         getDateNow() {
             return luxon.DateTime.now().toFormat('MM/dd/yyyy HH:mm:ss');
         },
         deleteMsg(indexActiveChat, index) {
-            this.contacts[indexActiveChat].chatLog.splice([index], 1)
+            this.contacts[indexActiveChat].chatLog.splice([index], 1);
 
 
         },
@@ -276,9 +276,7 @@ const app = new Vue({
                     contact.contactVisible = false;
 
                 }    
-            });
-
-            
+            });           
         },       
     }
 })
