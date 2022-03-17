@@ -7,14 +7,14 @@ const app = new Vue({
         newMsgSent: 
             {
                 textMsg: '',
-                date: luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss'),
+                date: luxon.DateTime.now().toFormat('MM/dd/yyyy HH:mm:ss'),
                 statusMsg: 'sent',
                 dropdownActive: false
             },
         newMsgReceived: 
             {
                 textMsg: 'LOL',
-                date: luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss'),
+                date: luxon.DateTime.now().toFormat('MM/dd/yyyy HH:mm:ss'),
                 statusMsg: 'received',
                 dropdownActive: false
             },
@@ -269,7 +269,7 @@ const app = new Vue({
             this.contacts[indexActiveChat].chatLog.splice([index], 1)
 
 
-        }
+        },
         
     },
 })

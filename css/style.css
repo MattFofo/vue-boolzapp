@@ -309,17 +309,18 @@ header {
 
 .btn-dropdown-box-msg {
     font: normal normal normal 14px/1 FontAwesome;
-    z-index: 100;
+    z-index: 40;
 }
 
 
 .dropdown-box-msg {
     position: absolute;
-    bottom: 0;
+    top: 30px;
     right: 0;
     width: 150px;
     height: 80px;
     background-color: white;
+    z-index: 50;
 
 }
 

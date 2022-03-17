@@ -79,7 +79,7 @@
                                         <div class="last-message-sent" v-if="contact.chatLog.length > 0">{{ contact.chatLog[contact.chatLog.length - 1].textMsg }}</div>
                                     </div>
 
-                                    <div class="time-last-access">{{ contact.dateLastAccess }}</div>
+                                    <div class="time-last-access">{{ contact.chatLog[contact.chatLog.length - 1].date }}</div>
                                 </li>
                                 
                             </ul>
@@ -98,7 +98,7 @@
 
                                 <div class="last-access-info">
                                     <div class="user-name">{{ contacts[indexActiveChat].contactName }}</div>
-                                    <div class="last-access">Ultimo accesso oggi alle {{ contacts[indexActiveChat].dateLastAccess }}</div>
+                                    <div class="last-access">Ultimo accesso oggi {{ contacts[indexActiveChat].chatLog[contacts[indexActiveChat].chatLog.length - 1].date }}</div>
                                 </div>
                             </div>
                         </div>
