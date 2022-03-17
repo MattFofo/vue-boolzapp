@@ -76,7 +76,7 @@
 
                                     <div class="chat-text">
                                         <div class="contact-name">{{ contact.contactName }}</div>
-                                        <div class="last-message-sent">{{ contact.chatLog[contact.chatLog.length - 1].textMsg }}</div>
+                                        <div class="last-message-sent" v-if="contact.chatLog.length > 0">{{ contact.chatLog[contact.chatLog.length - 1].textMsg }}</div>
                                     </div>
 
                                     <div class="time-last-access">{{ contact.dateLastAccess }}</div>
@@ -118,12 +118,12 @@
                                 <div class="time-msg time-msg-received">{{ chat.date }}</div>
 
                                 <!-- dropdown buttons -->
-                                <div class="btn-dropdown-box-msg" @click="chat.dropdown = !chat.dropdown" v-show="chat.dropdown == !chat.dropdown"><i class="fa-solid fa-angle-left"></i></div>
+                                <!-- <div class="btn-dropdown-box-msg" @click="chat.dropdownActive = !chat.dropdownActive" v-show="chat.dropdownActive == true"><i class="fa-solid fa-angle-left"></i></div> -->
 
-                                <div class="btn-dropdown-box-msg" @click="chat.dropdown = !chat.dropdown"><i class="fa-solid fa-angle-down"></i></div>
+                                <div class="btn-dropdown-box-msg" @click="chat.dropdownActive = !chat.dropdownActive"><i class="fa-solid fa-angle-down"></i></div>
                                 <!-- dropdown -->
-                                <div class="dropdown-box-msg" v-show="chat.dropdown == true">
-                                    <div class="delete-msg">Cancella</div>
+                                <div class="dropdown-box-msg" v-show="chat.dropdownActive == true">
+                                    <div class="delete-msg" @click="deleteMsg(indexActiveChat, index)">Cancella</div>
                                 </div>
                             </div>
                         </div>

@@ -8,13 +8,15 @@ const app = new Vue({
             {
                 textMsg: '',
                 date: luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss'),
-                statusMsg: 'sent'
+                statusMsg: 'sent',
+                dropdownActive: false
             },
         newMsgReceived: 
             {
                 textMsg: 'LOL',
                 date: luxon.DateTime.now().toFormat('MM-dd-yyyy HH:mm:ss'),
-                statusMsg: 'received'
+                statusMsg: 'received',
+                dropdownActive: false
             },
         contacts: [
             {
@@ -27,19 +29,19 @@ const app = new Vue({
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
                         statusMsg: 'sent',
-                        dropdown: false
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
                         statusMsg: 'sent',
-                        dropdown: false
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
-                        dropdown: false
+                        dropdownActive: false
                     }
 
                 ],
@@ -54,21 +56,29 @@ const app = new Vue({
                         textMsg: 'ciao!',
                         date: '15/03/2022 13:00',
                         statusMsg: 'sent',
+                        dropdownActive: false
+                        
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
                         statusMsg: 'sent',
+                        dropdownActive: false
+                        
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
+                        dropdownActive: false
+                        
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
+                        dropdownActive: false
+                        
                     }
 
                 ]
@@ -84,11 +94,13 @@ const app = new Vue({
                         textMsg: 'ci vediamo domani',
                         date: '15/03/2022 13:00',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
+                        dropdownActive: false
                     }
                 ]
             },
@@ -102,16 +114,19 @@ const app = new Vue({
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
+                        dropdownActive: false
                     }
 
                 ],
@@ -126,16 +141,19 @@ const app = new Vue({
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
+                        dropdownActive: false
                     }
 
                 ],
@@ -150,16 +168,19 @@ const app = new Vue({
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
+                        dropdownActive: false
                     }
 
                 ],
@@ -174,16 +195,19 @@ const app = new Vue({
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
+                        dropdownActive: false
                     }
 
                 ],
@@ -198,16 +222,19 @@ const app = new Vue({
                         textMsg: 'hai portato fuori il cane?',
                         date: '15/03/2022 13:00',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ricordati i panni!',
                         date: '15/03/2022 13:20',
                         statusMsg: 'sent',
+                        dropdownActive: false
                     },
                     {
                         textMsg: 'ok',
                         date: '15/03/2022 13:00',
                         statusMsg: 'received',
+                        dropdownActive: false
                     }
 
                 ],
@@ -238,6 +265,11 @@ const app = new Vue({
         msgBarNotOnFocus() {
             this.msgBarOnFocus = false;
         },
+        deleteMsg(indexActiveChat, index) {
+            this.contacts[indexActiveChat].chatLog.splice([index], 1)
+
+
+        }
         
     },
 })
