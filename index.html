@@ -54,7 +54,7 @@
                         </div>
                     </div>
 
-                    <!-- lista con tutte le chat aperte -->
+                    <!-- contatti e barra ricerca -->
                     <div class="contacts-chats-list">
                         <div class="search-bar flex">
 
@@ -62,7 +62,7 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
 
-                            <input type="text" name="search-bar-input" class="search-bar-input" id="search-bar-input" placeholder="Cerca o inizia una nuova chat">
+                            <input @focus="searchingContact" v-model="searchContact" type="text" name="search-bar-input" class="search-bar-input" id="search-bar-input" placeholder="Cerca o inizia una nuova chat">
                         </div>
 
                         <div class="chats-list-container">
@@ -71,7 +71,7 @@
                             <ul class="chats-list">
 
                                 <!-- singola chat -->
-                                <li v-for="(contact, index) in contacts" @click="indexActiveChat = index" class="chat flex"> 
+                                <li v-for="(contact, index) in contacts" @click="indexActiveChat = index" class="chat flex" v-show="contact.contactVisible"> 
                                     <img class="avatar-img" :src="contact.avatarImg" alt="">
 
                                     <div class="chat-text">
