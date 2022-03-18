@@ -27,40 +27,44 @@ ul {
 }
 
 .light-mode {
+
+    /* dimensions */
     --left-app-content-width: 30%;
-
     --header-height: 60px;
-    --header-bg: rgb(235,235,234);
-
     --container-app-width: 1400px;
     --container-app-height: 800px;
-
     --notification-alert-height: 70px;
     --search-bar-height: 50px;
 
+    /* colors */
+    --header-bg: rgb(235,235,234);
+    --notification-alert-bg: rgb(142,218,252);
+    --chat-list-container-bg: rgb(255,254,254);
     --text-color: rgb(193,194,204);
-
     --new-msg-bar-bg: rgb(242,238,235);
+    --active-chat-bg: url("../img/mine.jpg");
 
 
 
 }
 
 .dark-mode {
+
+    /* dimensions */
     --left-app-content-width: 30%;
-
     --header-height: 60px;
-    --header-bg: rgb(129, 129, 128);
-
     --container-app-width: 1400px;
     --container-app-height: 800px;
-
     --notification-alert-height: 70px;
     --search-bar-height: 50px;
 
+    /* colors */
+    --header-bg: rgb(129, 129, 128);
+    --notification-alert-bg: rgb(60, 106, 128);
+    --chat-list-container-bg: rgb(156, 156, 156);
     --text-color: rgb(193,194,204);
-
     --new-msg-bar-bg: rgb(124, 124, 124);
+    --active-chat-bg: linear-gradient(black, black), url("../img/mine.jpg");
     
 
 }
@@ -211,7 +215,7 @@ header {
 
 .notifications-alert {
     align-items: center;
-    background-color: rgb(142,218,252);
+    background-color: var(--notification-alert-bg);
     height: var(--notification-alert-height);
 }
 
@@ -270,7 +274,7 @@ header {
 
 
 .chats-list-container {
-    background-color: rgb(255,254,254);
+    background-color: var(--chat-list-container-bg);
     height: calc( var(--container-app-height) - var(--notification-alert-height) - var(--search-bar-height) - var(--header-height));
     overflow-y: scroll;
 }
@@ -330,7 +334,8 @@ header {
 
 .active-chat {
     height: calc(100% - var(--header-height) - var(--header-height));
-    background-image: url("../img/mine.jpg");
+    background-image: var(--active-chat-bg);
+    background-blend-mode: saturation;
     overflow-y: scroll;
 }
 
