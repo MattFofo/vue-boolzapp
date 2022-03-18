@@ -2,6 +2,7 @@
 const app = new Vue({
     el: '#root',
     data: {
+        darkMode: false,
         indexActiveChat: 0,
         msgBarOnFocus: false,
         searchContact: '',
@@ -335,7 +336,7 @@ const app = new Vue({
                 this.receiveNewMsg();
             }
         },
-        
+
         createMsgReceived() {
             this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgReceived});
             this.newMsgReceived.date = this.getDateNow();

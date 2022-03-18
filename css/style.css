@@ -24,7 +24,9 @@ ul {
     --colored-header-height: 8rem;
     --colored-header-bg: rgb(0,150,136);
     --container-jumbo-bg: rgb(215,218,215);
+}
 
+.light-mode {
     --left-app-content-width: 30%;
 
     --header-height: 60px;
@@ -41,6 +43,25 @@ ul {
     --new-msg-bar-bg: rgb(242,238,235);
 
 
+
+}
+
+.dark-mode {
+    --left-app-content-width: 30%;
+
+    --header-height: 60px;
+    --header-bg: rgb(129, 129, 128);
+
+    --container-app-width: 1400px;
+    --container-app-height: 800px;
+
+    --notification-alert-height: 70px;
+    --search-bar-height: 50px;
+
+    --text-color: rgb(193,194,204);
+
+    --new-msg-bar-bg: rgb(124, 124, 124);
+    
 
 }
 
@@ -206,6 +227,7 @@ header {
 }
 
 .turn-on-notification {
+    color: var(--header-bg);
     cursor: pointer;
 }
 

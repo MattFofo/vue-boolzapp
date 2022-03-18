@@ -15,13 +15,14 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        
         <div class="bg-viewport colored-header"></div>
         <div class="bg-viewport colored-cover"></div>
 
         <div class="container-jumbo">
             <!-- parte colorata sfondo viewport -->
 
-            <div id="root" class="container-app flex">
+            <div id="root" class="container-app flex" :class="darkMode == false ? 'light-mode' : 'dark-mode'">
                 <!-- contenuto sx app -->
                 <div class="left-app-content">
 
@@ -109,6 +110,8 @@
 
                         <!-- pulsanti  -->
                         <div class="header-btns right-header-btns flex">
+                            <i class="fa-solid fa-moon" @click="darkMode = !darkMode" v-show="darkMode == false"></i>
+                            <i class="fa-solid fa-sun" @click="darkMode = !darkMode" v-show="darkMode == true"></i>
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
