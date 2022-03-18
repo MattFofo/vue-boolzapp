@@ -335,10 +335,12 @@ const app = new Vue({
                 this.receiveNewMsg();
             }
         },
+        
         createMsgReceived() {
             this.contacts[this.indexActiveChat].chatLog.push({...this.newMsgReceived});
             this.newMsgReceived.date = this.getDateNow();
         },
+
         receiveNewMsg() {
             setTimeout(this.createMsgReceived, 2000);
         },
@@ -346,6 +348,7 @@ const app = new Vue({
         getDateNow() {
             return luxon.DateTime.now().toFormat('MM/dd/yyyy HH:mm:ss');
         },
+
         deleteMsg(indexActiveChat, index) {
             this.contacts[indexActiveChat].chatLog.splice([index], 1);
 

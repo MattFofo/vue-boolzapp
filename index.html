@@ -111,7 +111,6 @@
                     </header>
 
                     <div class="active-chat">
-                        
                         <div class="container-msgs">
                             <div class="empty-chat flex" v-show="contacts[indexActiveChat].chatLog.length == 0">
                                 <i class="fa-solid fa-comment-slash empty-chat-icon"></i>
@@ -146,7 +145,7 @@
                     </div>
 
                     <!-- barra inserimento nuovo msg -->
-                    <div class="new-msg-bar flex align-center">
+                    <footer class="new-msg-bar flex align-center">
                         <div class="new-msg-bar-btn emoticons">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
@@ -156,9 +155,9 @@
                         <!-- icona microfono ed invio -->
                         <div class="new-msg-bar-btn send-vocal-msg relative">
                             <i class="fa-solid fa-microphone" :class="!msgBarOnFocus ? 'd-block' : 'd-none'" ></i>
-                            <i class="fa-solid fa-paper-plane" :class="!msgBarOnFocus ? 'd-none' : 'd-block'" v-if="newMsgSent.textMsg != '' ? msgBarOnFocus = true : msgBarOnFocus = false"></i>
+                            <i class="fa-solid fa-paper-plane" @click="sendNewMsg" :class="!msgBarOnFocus ? 'd-none' : 'd-block'" v-if="newMsgSent.textMsg != '' ? msgBarOnFocus = true : msgBarOnFocus = false"></i>
                         </div>
-                    </div>
+                    </footer>
                 </div>
             </div>
         </div>
