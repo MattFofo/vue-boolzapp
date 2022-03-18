@@ -98,8 +98,10 @@
                                 <div class="last-access-info">
                                     <div class="user-name">{{ contacts[indexActiveChat].contactName }}</div>
 
+                                    <!-- utlimo msg inviato -->
                                     <div class="last-access" v-if="contacts[indexActiveChat].chatLog.length > 0" v-show="contacts[indexActiveChat].chatLog[(contacts[indexActiveChat].chatLog.length - 1)].statusMsg == 'sent'">Ultimo messaggio inviato {{ contacts[indexActiveChat].chatLog[(contacts[indexActiveChat].chatLog.length - 1)].date }}</div>
 
+                                    <!-- ultimo msg ricevuto -->
                                     <div class="last-access" v-if="contacts[indexActiveChat].chatLog.length > 0" v-show="contacts[indexActiveChat].chatLog[(contacts[indexActiveChat].chatLog.length - 1)].statusMsg == 'received'">Ultimo messaggio ricevuto {{ contacts[indexActiveChat].chatLog[(contacts[indexActiveChat].chatLog.length - 1)].date }}</div> 
                                 </div>
                             </div>
