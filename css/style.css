@@ -43,6 +43,7 @@ ul {
     --text-color: rgb(193,194,204);
     --new-msg-bar-bg: rgb(242,238,235);
     --active-chat-bg: url("../img/mine.jpg");
+    --active-chat-filter: none;
 }
 
 .dark-mode {
@@ -53,6 +54,7 @@ ul {
     --text-color: rgb(193,194,204);
     --new-msg-bar-bg: rgb(124, 124, 124);
     --active-chat-bg: linear-gradient(black, black), url("../img/mine.jpg");
+    --active-chat-filter: invert(.9);
 }
 
 /* ********************************************************* */
@@ -310,6 +312,7 @@ header {
     height: calc(100% - var(--header-height) - var(--header-height));
     background-image: var(--active-chat-bg);
     background-blend-mode: saturation;
+    filter: var(--active-chat-filter);
     overflow-y: scroll;
 }
 
