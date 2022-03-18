@@ -50,7 +50,7 @@
 
                         <div class="notification-alert-text">
                             <div>Ricevi notifiche di nuovi messaggi</div>
-                            <div class="underline">Attiva notifiche desktop</div>
+                            <div class="underline turn-on-notification">Attiva notifiche desktop</div>
                         </div>
                     </div>
 
@@ -80,8 +80,7 @@
                                     </div>
 
                                     <div class="time-last-access"  v-if="contact.chatLog.length > 0">{{ contact.chatLog[(contact.chatLog.length - 1)].date }}</div> 
-                                </li>
-                                
+                                </li>  
                             </ul>
                         </div>
                     </div>
@@ -112,25 +111,32 @@
                     </header>
 
                     <div class="active-chat">
+                        
                         <div class="container-msgs">
+                            <div class="empty-chat flex" v-show="contacts[indexActiveChat].chatLog.length == 0">
+                                <i class="fa-solid fa-comment-slash empty-chat-icon"></i>
+                                <h2 class="empty-chat-msg">Nothing to see here</h2>
+                            </div>
                             <div v-for="(chat, index) in contacts[indexActiveChat].chatLog" class="box-msg" :class="chat.statusMsg == 'sent' ? 'msg-sent' : 'msg-received'">
-
+                                
                                 <div class="text-msg flex">
                                     <p class="text">{{ chat.textMsg }}</p>
                                 </div>
                                 <div class="time-msg time-msg-received">{{ chat.date }}</div>
 
-                                <!-- dropdown buttons -->
-                                <!-- <div class="btn-dropdown-box-msg" @click="chat.dropdownActive = !chat.dropdownActive" v-show="chat.dropdownActive == true"><i class="fa-solid fa-angle-left"></i></div> -->
 
                                 <!-- dropdown -->
                                 <div class="dropdown">
-                                    <div class="btn-dropdown-box-msg" @click="chat.dropdownActive = !chat.dropdownActive">
+                                    <div class="btn-dropdown-box-msg" @click="chat.dropdownActive = !chat.dropdownActive" v-show="chat.dropdownActive != true">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </div>
+                                    <div class="btn-dropdown-box-msg" @click="chat.dropdownActive = !chat.dropdownActive" v-show="chat.dropdownActive == true">
                                         <i class="fa-solid fa-angle-down"></i>  
                                     </div>
 
                                     <div class="dropdown-box-msg" v-show="chat.dropdownActive == true">
-                                        <div class="delete-msg" @click="deleteMsg(indexActiveChat, index)">Cancella</div>
+                                        <div class="delete-msg" @click="deleteMsg(indexActiveChat, index)">Delete Message</div>
+                                        <div class="info-msg">Message Info</div>
                                     </div>
                                 </div>
 
@@ -147,19 +153,15 @@
                         
                         <input @keydown.enter="sendNewMsg"  v-model="newMsgSent.textMsg" type="text" name="write-new-msg-input" class="write-new-msg-input" id="write-new-msg-input" placeholder="Scrivi messaggio">
 
+                        <!-- icona microfono ed invio -->
                         <div class="new-msg-bar-btn send-vocal-msg relative">
-                            <!-- TODO: bottone invio compare, ma poi non torna il microfono. Il probema penso che sia che la variabile msgBarOnFocus una volta che si setta true tramita il @focus non torna più false -->
-
                             <i class="fa-solid fa-microphone" :class="!msgBarOnFocus ? 'd-block' : 'd-none'" ></i>
-
                             <i class="fa-solid fa-paper-plane" :class="!msgBarOnFocus ? 'd-none' : 'd-block'" v-if="newMsgSent.textMsg != '' ? msgBarOnFocus = true : msgBarOnFocus = false"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
 
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.3.1/luxon.min.js" integrity="sha512-Nw0Abk+Ywwk5FzYTxtB70/xJRiCI0S2ORbXI3VBlFpKJ44LM6cW2WxIIolyKEOxOuMI90GIfXdlZRJepu7cczA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
