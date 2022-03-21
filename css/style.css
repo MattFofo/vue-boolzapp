@@ -341,6 +341,11 @@ header {
 .btn-dropdown-box-msg {
     font: normal normal normal 14px/1 FontAwesome;
     z-index: 40;
+    display: none;
+}
+
+.box-msg:hover .btn-dropdown-box-msg{
+    display: block;
 }
 
 .dropdown-box-msg {
